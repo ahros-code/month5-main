@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import './SingleCountry.css';
 
 const SingleCountry = () => {
@@ -22,8 +22,24 @@ const SingleCountry = () => {
 
 	return (
 		<div className='singleCountry-wrapper'>
+			<Link to='/' className='back'>Back</Link>
 			{country.map(c => (
-				<div>{c.name.common}</div>
+				<div className='wrap'>
+					<div className='left'>
+						<img
+							className='singleCountry-flag'
+							src={c.flags.png}
+							alt={c.name.common}
+						/>
+					</div>
+					<div className='right'>
+						<h3>{c.name.common}</h3>
+						<p className='smallInfo-item'>Population: {c.population}</p>
+						<p className='smallInfo-item'>Region: {c.region}</p>
+						<p className='smallInfo-item'>Subregion: {c.subregion}</p>
+						<p className='smallInfo-item'>Capital: {c.capital}</p>
+					</div>
+				</div>
 			))}
 		</div>
 	);
