@@ -1,0 +1,32 @@
+.cardWrapper {
+	margin-top: 45px;
+	width: 264px;
+	height: 336px;
+	box-shadow: 0px 0px 7px 2px #00000008;
+	background-color: #fff;
+	margin-bottom: 75px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+
+.cardWrapper img {
+	width: 100%;
+}
+
+.card-title {
+	margin-left: 24px;
+	margin-top: 20px;
+}
+
+.smallInfo {
+	margin-left: 24px;
+	margin-top: 16px;
+}
+
+.smallInfo-item {
+	margin-bottom: 4px;
+}
+
+.link {
+	color: #000;
+}
