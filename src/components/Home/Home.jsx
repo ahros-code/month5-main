@@ -1,30 +1,34 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
-import Card from '../Card/Card'
-import './Home.css'
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import Card from '../Card/Card';
+import './Home.css';
 
 const Home = () => {
-	const [newsData, setNewsData] = useState([]);
+	const [countries, setCountries] = useState([]);
 
-	const fetchData = async () => {
-		const response = await axios.get(
-			'https://api.spaceflightnewsapi.net/v3/articles'
-		);
-		setNewsData(response.data);
+	const getData = async () => {
+		const response = await axios.get('https://restcountries.com/v3.1/all');
+		setCountries(response.data);
 	};
-	
+
 	useEffect(() => {
-		fetchData();
-	}, []); 
+		getData();
+	}, []);
+
 	return (
-		<div>
-		{	
-			newsData.map(news=>(
-				<Card key={news.id} title={news.title} image={news.imageUrl} summary={news.summary} id={news.id}/>
-			))
-		}
-</div>
-	)
+		<div className='all-cards'>
+			{countries.map(country => (
+				<Card
+					key={country.name.common}
+					name={country.name.common}
+					flag={country.flags.png}
+					population={country.population}
+					region={country.region}
+					capital={country.capital}
+				/>
+			))}
+		</div>
+	);
 };
 
 export default Home;

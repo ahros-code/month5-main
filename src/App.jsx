@@ -1,14 +1,17 @@
-import { Routes, Route } from 'react-router-dom'
-import Home from './components/Home/Home'
-import SingleArticle from './components/SingleArticle/SingleArticle'
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import Home from './components/Home/Home';
+import SingleCountry from './components/SingleCountry/SingleCountry';
 
 const App = () => {
- return (
-	<Routes>
-		<Route path='/' element={<Home />} />
-		<Route path='news/:id' element={<SingleArticle />} />
-	</Routes>
- )
-}
+	return (
+		<div className='container'>
+			<Routes>
+				<Route path='/' element={<Home />} />
+				<Route path='countries/:name' element={<SingleCountry />} />
+			</Routes>
+		</div>
+	);
+};
 
-export default App
+export default App;
