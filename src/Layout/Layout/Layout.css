@@ -4,12 +4,12 @@
 }
 
 .layout__left {
-	width: 40%;
+	width: 30%;
 	border-right: 1px solid #C4C4C4;
 }
 
 .layout__right {
-	width: 50%;
+	width: 35%;
 	border-left: 1px solid #C4C4C4;
 }
 
