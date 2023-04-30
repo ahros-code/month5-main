@@ -1,0 +1,17 @@
+.layout__block {
+	display: flex;
+	justify-content: space-between;
+}
+
+.layout__left {
+	width: 30%;
+}
+
+.layout__right {
+	width: 35%;
+	border-left: 1px solid #c4c4c4;
+}
+
+.layout__center {
+	width: 100%;
+}

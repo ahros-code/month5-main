@@ -1,16 +1,29 @@
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import Home from './components/Home/Home';
-import SingleCountry from './components/SingleCountry/SingleCountry';
+import Layout from './Layout/Layout/Layout.jsx';
+import Bookmarks from './pages/Bookmarks/Bookmarks.jsx';
+import Explore from './pages/Explore/Explore.jsx';
+import Home from './pages/Home/Home.jsx';
+import Lists from './pages/Lists/Lists.jsx';
+import Messages from './pages/Messages/Messages.jsx';
+import More from './pages/More/More.jsx';
+import Notifications from './pages/Notifications/Notifications.jsx';
+import Profile from './pages/Profile/Profile.jsx';
 
 const App = () => {
 	return (
-		<div className='container'>
-			<Routes>
+		<Routes>
+			<Route path='/' element={<Layout />}>
 				<Route path='/' element={<Home />} />
-				<Route path='countries/:name' element={<SingleCountry />} />
-			</Routes>
-		</div>
+				<Route path='/explore' element={<Explore />} />
+				<Route path='/notifications' element={<Notifications />} />
+				<Route path='/messages' element={<Messages />} />
+				<Route path='/bookmarks' element={<Bookmarks />} />
+				<Route path='/lists' element={<Lists />} />
+				<Route path='/profile' element={<Profile />} />
+				<Route path='/more' element={<More />} />
+				<Route />
+			</Route>
+		</Routes>
 	);
 };
 

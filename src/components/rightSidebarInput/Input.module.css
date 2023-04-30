@@ -1,0 +1,20 @@
+.input {
+	background: #eff3f4;
+	border-radius: 31px;
+	border: none;
+	width: 373px;
+	height: 55px;
+	background-image: url('../../assets/images//rightSideBar/search.svg');
+	background-repeat: no-repeat;
+	background-position: 20px;
+	padding-left: 64px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.input::placeholder {
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 24px;
+	color: #5c6c79;
+}

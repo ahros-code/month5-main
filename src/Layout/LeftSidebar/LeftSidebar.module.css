@@ -1,0 +1,135 @@
+.items > * {
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 24px;
+	color: #000000;
+}
+
+.wrapper {
+	padding-top: 31px;
+	border-right: 1px solid #c4c4c4;
+	height: 100%;
+}
+
+.logo {
+	padding-bottom: 49px;
+}
+
+.items {
+	margin-bottom: 20px;
+	margin-left: 40px;
+}
+
+.peopleNameTextSection > p {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 21px;
+
+	color: #000000;
+
+	opacity: 0.6;
+}
+
+.peopleNameTextSection > h4 {
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 21px;
+	color: #000000;
+}
+
+.peopleNameTextSection  {
+	display: flex;
+	flex-direction: column;
+	margin-left: 10px;
+}
+
+.peopleName {
+	display: flex;
+	align-items: center;
+	margin-top: 180px;
+}
+
+.home::before {
+	content: '';
+	background-image: url('../../assets/images/sidebar/home.svg');
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	margin-left: -40px;
+	margin-top: -5px;
+}
+.explore::before {
+	content: '';
+	background-image: url('../../assets/images/sidebar/explore.svg');
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	margin-left: -40px;
+	margin-top: -5px;
+}
+.notifications::before {
+	content: '';
+	background-image: url('../../assets/images/sidebar/notification.svg');
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	margin-left: -40px;
+	margin-top: -5px;
+}
+.messages::before {
+	content: '';
+	background-image: url('../../assets/images/sidebar/messages.svg');
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	margin-left: -40px;
+	margin-top: -5px;
+}
+
+.bookmarks::before {
+	content: '';
+	background-image: url('../../assets/images/sidebar/bookmarks.svg');
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	margin-left: -40px;
+	margin-top: -5px;
+}
+
+.lists::before {
+	content: '';
+	background-image: url('../../assets/images/sidebar/lists.svg');
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	margin-left: -40px;
+	margin-top: -5px;
+}
+
+.profile::before {
+	content: '';
+	background-image: url('../../assets/images/sidebar/profile.svg');
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	margin-left: -40px;
+	margin-top: -5px;
+}
+
+.more::before {
+	content: '';
+	background-image: url('../../assets/images/sidebar/messages.svg');
+	display: inline-block;
+	width: 28px;
+	height: 28px;
+	position: absolute;
+	margin-left: -40px;
+	margin-top: -5px;
+}
