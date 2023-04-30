@@ -1,17 +1,14 @@
-import { Route, Routes } from 'react-router-dom';
-import './App.css';
-import Home from './components/Home/Home';
-import SingleCountry from './components/SingleCountry/SingleCountry';
+import {Routes, Route} from "react-router-dom";
+import Layout from "./Layout/Layout.jsx";
 
 const App = () => {
-	return (
-		<div className='container'>
-			<Routes>
-				<Route path='/' element={<Home />} />
-				<Route path='countries/:name' element={<SingleCountry />} />
-			</Routes>
-		</div>
-	);
-};
+ return (
+	<Routes>
+        <Route path='/' element={<Layout />}>
 
-export default App;
+        </Route>
+    </Routes>
+ )
+}
+
+export default App
