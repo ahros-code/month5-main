@@ -1,0 +1,18 @@
+.layout__block{
+	display: flex;
+	justify-content: space-between;
+}
+
+.layout__left {
+	width: 40%;
+	border-right: 1px solid #C4C4C4;
+}
+
+.layout__right {
+	width: 50%;
+	border-left: 1px solid #C4C4C4;
+}
+
+.layout__center {
+	width: 100%;
+}
