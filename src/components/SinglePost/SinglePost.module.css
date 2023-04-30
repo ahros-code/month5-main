@@ -1,0 +1,17 @@
+.cardWrapper {
+	border-bottom: 1px solid #c4c4c4;
+}
+
+.card {
+	margin-left: 25px;
+	display: flex;
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+
+.cardTextSection {
+	display: flex;
+	flex-direction: column;
+	margin-left: 15px;
+	margin-top: 10px;
+}

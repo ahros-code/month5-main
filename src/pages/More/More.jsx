@@ -1,5 +1,9 @@
+import css from './More.module.css'
+
 const More = () => {
- return <div>More</div>
+ return (
+	<p className={css.title}>More</p>
+ )
 }
 
 export default More

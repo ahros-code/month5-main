@@ -1,5 +1,9 @@
+import css from './Notifications.module.css'
+
 const Notifications = () => {
- return <div>Notifications</div>
+ return (
+	<p className={css.title}>Notifications</p>
+ )
 }
 
 export default Notifications

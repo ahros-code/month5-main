@@ -1,6 +1,7 @@
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/images/sidebar/twitter-logo-4 1.png';
 import css from './LeftSidebar.module.css';
+import brat from '../../assets/images/mainbar/brat.png'
 
 const LeftSidebar = () => {
 	return (
@@ -36,6 +37,13 @@ const LeftSidebar = () => {
 						<NavLink className={css.more} to='/more'>More</NavLink>
 					</li>
 				</ul>
+				<div className={css.peopleName}>
+					<img src={brat} alt="brat img" />
+					<div className={css.peopleNameTextSection}>
+						<h4>Hamidulloh</h4>
+						<p>@wyn</p>
+					</div>
+				</div>
 			</div>
 		</>
 	);

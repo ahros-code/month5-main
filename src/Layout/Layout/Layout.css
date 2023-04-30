@@ -1,16 +1,15 @@
-.layout__block{
+.layout__block {
 	display: flex;
 	justify-content: space-between;
 }
 
 .layout__left {
 	width: 30%;
-	border-right: 1px solid #C4C4C4;
 }
 
 .layout__right {
 	width: 35%;
-	border-left: 1px solid #C4C4C4;
+	border-left: 1px solid #c4c4c4;
 }
 
 .layout__center {

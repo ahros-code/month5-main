@@ -1,0 +1,49 @@
+.title {
+	padding-left: 20px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 32px;
+	border-bottom: 1px solid #c4c4c4;
+}
+
+.inputSection {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid #c4c4c4;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.input {
+	border: none;
+	height: 30px;
+	width: 70%;
+	outline: none;
+	padding-top: 10px;
+}
+
+.bratImg {
+	padding-left: 22px;
+	padding-right: 15px;
+}
+
+.input::placeholder {
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 29px;
+}
+
+.btn {
+	font-weight: 700;
+	font-size: 17px;
+	line-height: 100%;
+	color: #ffffff;
+	padding: 15px 30px;
+	box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+	border-radius: 120px;
+	background: #1da1f2;
+	margin-right: 20px;
+	border: none;
+}

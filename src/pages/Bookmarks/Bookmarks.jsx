@@ -1,5 +1,9 @@
+import css from './Bookmarks.module.css'
+
 const Bookmarks = () => {
- return <div>Bookmarks</div>
+ return (
+	<p className={css.title}>Bookmarks</p>
+ )
 }
 
 export default Bookmarks
