@@ -2,6 +2,8 @@ import { useState } from 'react';
 import brat from '../../assets/images/mainbar/brat.png';
 import SinglePost from '../../components/SinglePost/SinglePost';
 import css from './Home.module.css';
+import { useContext } from 'react';
+import { SearchContext } from '../../components/context/searchContext';
 
 const Home = () => {
 	const [newPosts, setNewPosts] = useState([]);
@@ -23,7 +25,17 @@ const Home = () => {
 
 	localStorage.setItem('posts', JSON.stringify(posts));
 
-	const myData = posts.map(post => (
+	const {searchData, setSearchData} = useContext(SearchContext);
+
+	const myData = posts.filter((post)=>{
+		if(!searchData.trim()) {
+			return post;
+		} else if (
+			post.text.toLowerCase().includes(searchData.toLowerCase())
+		) {
+			return post
+		}
+	}).map(post => (
 		<SinglePost key={post.id} text={post.text} />
 	));
 
