@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx';
 import './assets/styles/global.css';
 import { AuthContextProvider } from './context/AuthContext.jsx';
-import { SearchContextProvider } from './context/searchContext.jsx';
+import { SearchContextProvider } from './context/SearchContext.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<BrowserRouter>
