@@ -45,7 +45,6 @@ const Home = () => {
 	return (
 		<div className={css.wrapper}>
 			<p className={css.title}>Home</p>
-			<h4>{token ? "kirilgan": "kirilmagan"}</h4>
 			<form className={css.inputSection} onSubmit={handleNewPostSubmit}>
 				<img src={brat} alt='bratti rasmi' className={css.bratImg} />
 				<input
