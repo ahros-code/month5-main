@@ -3,7 +3,7 @@ import brat from '../../assets/images/mainbar/brat.png';
 import SinglePost from '../../components/SinglePost/SinglePost';
 import css from './Home.module.css';
 import { useContext } from 'react';
-import { SearchContext } from '../../context/searchContext';
+import { SearchContext } from '../../context/SearchContext';
 import { AuthContext } from '../../context/AuthContext';
 
 const Home = () => {
