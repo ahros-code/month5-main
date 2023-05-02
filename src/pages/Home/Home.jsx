@@ -3,7 +3,8 @@ import brat from '../../assets/images/mainbar/brat.png';
 import SinglePost from '../../components/SinglePost/SinglePost';
 import css from './Home.module.css';
 import { useContext } from 'react';
-import { SearchContext } from '../../components/context/searchContext';
+import { SearchContext } from '../../context/searchContext';
+import { AuthContext } from '../../context/AuthContext';
 
 const Home = () => {
 	const [newPosts, setNewPosts] = useState([]);
@@ -11,6 +12,8 @@ const Home = () => {
 		const storedPost = localStorage.getItem('posts');
 		return storedPost ? JSON.parse(storedPost) : [];
 	});
+
+	const {token} = useContext(AuthContext)
 
 	const handleNewPostChange = e => {
 		setNewPosts(e.target.value);
@@ -25,7 +28,7 @@ const Home = () => {
 
 	localStorage.setItem('posts', JSON.stringify(posts));
 
-	const {searchData, setSearchData} = useContext(SearchContext);
+	const {searchData} = useContext(SearchContext);
 
 	const myData = posts.filter((post)=>{
 		if(!searchData.trim()) {
@@ -42,6 +45,7 @@ const Home = () => {
 	return (
 		<div className={css.wrapper}>
 			<p className={css.title}>Home</p>
+			<h4>{token ? "kirilgan": "kirilmagan"}</h4>
 			<form className={css.inputSection} onSubmit={handleNewPostSubmit}>
 				<img src={brat} alt='bratti rasmi' className={css.bratImg} />
 				<input

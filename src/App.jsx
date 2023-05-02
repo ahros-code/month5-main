@@ -8,11 +8,15 @@ import Messages from './pages/Messages/Messages.jsx';
 import More from './pages/More/More.jsx';
 import Notifications from './pages/Notifications/Notifications.jsx';
 import Profile from './pages/Profile/Profile.jsx';
+import Login from './pages/Login/Login.jsx';
+import { useContext } from 'react';
+import { AuthContext } from './context/AuthContext.jsx'
 
 const App = () => {
+	const {token} = useContext(AuthContext)
 	return (
 		<Routes>
-			<Route path='/' element={<Layout />}>
+			{!token ? <Route path='/' element={<Login />}/>: <Route path='/' element={<Layout />}>
 				<Route path='/' element={<Home />} />
 				<Route path='/explore' element={<Explore />} />
 				<Route path='/notifications' element={<Notifications />} />
@@ -21,8 +25,10 @@ const App = () => {
 				<Route path='/lists' element={<Lists />} />
 				<Route path='/profile' element={<Profile />} />
 				<Route path='/more' element={<More />} />
-				<Route />
-			</Route>
+			</Route>}
+			
+			<Route path='*' element={<h1>Not found</h1>} />
+			
 		</Routes>
 	);
 };
