@@ -26,9 +26,7 @@ const App = () => {
 				<Route path='/profile' element={<Profile />} />
 				<Route path='/more' element={<More />} />
 			</Route>}
-			
 			<Route path='*' element={<h1>Not found</h1>} />
-			
 		</Routes>
 	);
 };
